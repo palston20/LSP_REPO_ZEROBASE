@@ -19,7 +19,7 @@ public class Book {
 	 * @param ISBN
 	 * @param publishedYear
 	 */
-	public Book(String title, String author, String ISBN, int publsihedYear) {
+	public Book(String title, String author, String ISBN, int publishedYear) {
 		this.title = title;
 		this.author = author;
 		this.ISBN = ISBN;
@@ -86,7 +86,7 @@ public class Book {
 
 //Override 
 	public String toString() {
-		return "Title: " + title + ",Author: " + author + ",ISBN: " + ISBN + ", Year Published: "
+		return "Title: " + title + ", Author: " + author + ", ISBN: " + ISBN + ", Year Published: "
 				+ publishedYear;	
 	}
 }
