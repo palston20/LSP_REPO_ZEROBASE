@@ -6,3 +6,4 @@ public interface StreamingService {
 	void stop();
 
 }
+// Credit for Implementation W3 Schools: https://www.w3schools.com/java/tryjava.asp?filename=demo_interface
