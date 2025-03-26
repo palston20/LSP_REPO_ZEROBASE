@@ -206,3 +206,8 @@ public class IntegerSet {
 
 	
 }
+
+
+//Used ChatGPT and YouTube for help on the javadoc html documentation
+// YouTube Link: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DhZ8NFQEd8BE&ved=2ahUKEwiolceI2aiMAxXoF1kFHasiHXkQwqsBegQIEBAG&usg=AOvVaw37oRTPYeHA1nFaM2mKE2yj
+//ChatGPT Link :https://chatgpt.com
