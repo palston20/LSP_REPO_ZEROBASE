@@ -91,4 +91,6 @@ public class Book {
 	}
 }
 
+//credit for encapsulation WebWorks: https://www.w3schools.com/java/java_encapsulation.asp
+
 
