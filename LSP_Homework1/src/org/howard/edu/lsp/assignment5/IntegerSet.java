@@ -196,7 +196,7 @@ public class IntegerSet {
 	
 	/**
 	 * Returns a string representation of the set.
-	 * @return String representation fo set elemtns
+	 * @return String representation for set elements
 	 */
 
 	// Return String representation of your set.  This overrides the equal method from 
