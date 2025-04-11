@@ -2,21 +2,20 @@ package org.howard.edu.lsp.assignment5;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * This class represents sets of integers.
  * It will have functions and operations such as union intersection, max, min, etc
  * using an Array List
  */
+
 public class IntegerSet {
 	//Store set elements in ArrayList
 	private List<Integer> set = new ArrayList<Integer>();
 	
 	//Default Constructor 
 	public IntegerSet() {
-		/**
-		 * Constructor will initialize the set with given values.
-		 * @param set List of integers to initialize the set
-		 */
+	
 		
 }
 
@@ -28,12 +27,12 @@ public class IntegerSet {
 				this.set.add(num);
 			}
 		}
-	};
+	}
 	
 	//Clears the internal representation of the set.
 	public void clear() {
 		set.clear();
-	};
+	}
 	
 	
 	/**
@@ -41,13 +40,12 @@ public class IntegerSet {
 	 * @return Number of elements in the set. 
 	 */
 	
-	//Returns the length of the set.
 	public int length() {
-		return 0;
+		return set.size();
 		
-	}; 
+	} 
 	
-	/*
+	/**
 	 * Checks if two sets are equal.
 	 * @param o Another object to compare
 	 * @return True if sets have the same elements,, false otherwise.
@@ -55,12 +53,12 @@ public class IntegerSet {
 	
 	@Override 
 	public boolean equals(Object o) {
-		if(o instanceof IntegerSet) {
+		if (o instanceof IntegerSet) {
 			IntegerSet otherSet = (IntegerSet) o;
 			return set.containsAll(otherSet.set) && otherSet.set.containsAll(set);
 		}
 		return false;
-	};
+	}
 	
 	/**
      * Checks if the set contains a given value.
@@ -68,10 +66,10 @@ public class IntegerSet {
      * @return True if value exists in the set, false otherwise.
      */
 	
-	//Returns true if the set contains the value, otherwise false
+	
 	public boolean contains(int value) {
 		return set.contains(value);
-	};
+	}
 	
 	
 	/**
@@ -86,7 +84,8 @@ public class IntegerSet {
 			throw new RuntimeException("Set is empty");
 		}
 		return set.stream().max(Integer::compareTo).get();
-		}; 
+		
+	}
 
 	/**
 	 * Returns the smallest item in set	
@@ -100,7 +99,7 @@ public class IntegerSet {
 			throw new RuntimeException("Set is empty");
 		}
 		return set.stream().min(Integer::compareTo).get();
-	};
+	}
 	
 	/**
 	 * Adds an item to the set if it's not already there
@@ -124,7 +123,7 @@ public class IntegerSet {
 	public void remove(int item) {
 		set.remove(Integer.valueOf(item));
 		
-	}; 
+	} 
 	
 	/**
 	 * Unites with another set
@@ -151,7 +150,7 @@ public class IntegerSet {
 	public void intersect(IntegerSet intSetb) {
 		set.retainAll(intSetb.set);
 		
-	}; 
+	}
 
 	
 	/**
@@ -162,7 +161,7 @@ public class IntegerSet {
 	public void diff(IntegerSet intSetb) {
 		set.removeAll(intSetb.set);
 		
-	}; // set difference, i.e. s1 - s2
+	} // set difference, i.e. s1 - s2
 	
 	
 	
@@ -173,11 +172,15 @@ public class IntegerSet {
 
 	// Set complement, all elements not in s1. 
 	public void complement(IntegerSet intSetb) { 
-		List<Integer> temp = new ArrayList<>(intSetb.set);
-		temp.removeAll(set);
-		set = temp;
+		List<Integer> result = new ArrayList<>();
+		for (int num : intSetb.set) {
+			if (!this.set.contains(num)) {
+				result.add(num);
+			}
+		}
+		this.set = result;
 		
-	};
+	}
 	
 	
 	/**
@@ -189,7 +192,7 @@ public class IntegerSet {
 	boolean isEmpty() {
 		return set.isEmpty();
 		
-	}; 
+	}
 	
 	/**
 	 * Returns a string representation of the set.
@@ -202,7 +205,7 @@ public class IntegerSet {
 	public String toString() {
 		return set.toString();
 		
-	};	// return String representation of your set
+	}	// return String representation of your set
 
 	
 }
